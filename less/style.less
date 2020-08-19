@@ -1,0 +1,82 @@
+svg {
+  transform: scale(.5);
+  overflow: visible;
+}
+
+#secondfinger_1_ {
+  transform-origin: 10% 10%;
+  .addAnimation(moveSecondFinger, .6s);
+}
+
+#firstfinger_1_ {
+  transform-origin: 10% 10%;
+  .addAnimation(moveFirstFinger, .6s);
+}
+
+#claw_1_ {
+  transform-origin: 12% 12%;
+  .addAnimation(moveClaw, 1.5s);
+}
+
+#forearm_1_ {
+  transform-origin: 9% 9%;
+  .addAnimation(moveForearm, 2.6s);
+}
+
+#arm_1_ {
+  transform-origin: 9% 9%;
+  .addAnimation(moveArm, 2.6s);
+}
+
+.addAnimation(@name, @duration) {
+  animation-name: @name;
+  animation-duration: @duration;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes moveFirstFinger {
+  0% {
+    transform: rotate(-30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes moveSecondFinger {
+  0% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes moveClaw {
+  0% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(-20deg);
+  }
+}
+
+@keyframes moveForearm {
+  0% {
+    transform: rotate(30deg);
+  }
+  100% {
+    transform: rotate(-30deg);
+  }
+}
+
+@keyframes moveArm {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
