@@ -28,7 +28,6 @@ void turnLeft(){
 
 
 void count(){
-
   encoderValue++;
 
   if((int) encToAngle(encoderValue) == (int) to_be_rotated_by){
@@ -79,7 +78,7 @@ void loop(){
     delay(1000);
     Serial.println("the first coordinate is ");
     Serial.print(x);
-
+    
     if(x > 0)
       rotate_right_by(x);
 
@@ -87,8 +86,7 @@ void loop(){
 
      if(y>0)
      rotate_left_by(y);
-
-
+    
   }
 
   delay(500);
